@@ -23,9 +23,7 @@ import java.util.Comparator;
 
 public class Exercise23_01 {
 
-    // ---------------------------------------------------------------
-    // TODO 1: Implement insertionSort using Comparable
-
+// ---------------------------------------------------------------
     public static <E extends Comparable<E>> void insertionSort(E[] list){
         for (int i = 1; i < list.length; i++) {
             E currentElement = list[i];
@@ -40,13 +38,10 @@ public class Exercise23_01 {
         }
 
     }
-    // ---------------------------------------------------------------
+// ---------------------------------------------------------------
 
 
-    // ---------------------------------------------------------------
-    // TODO 2: Implement insertionSort using Comparator
-    //
-    // Method signature:
+// ---------------------------------------------------------------
     public static <E> void insertionSort(E[] list, Comparator<? super E> comparator){
         for (int i = 1; i < list.length; i++) {
             E currentElement = list[i];
@@ -60,15 +55,10 @@ public class Exercise23_01 {
             list[k + 1] = currentElement;
         }
     }
-    //
-    // Same logic as TODO 1, but replace compareTo() with comparator.compare()
-    // ---------------------------------------------------------------
+// ---------------------------------------------------------------
 
 
-    // ---------------------------------------------------------------
-    // TODO 3: Implement bubbleSort using Comparable
-    //
-    // Method signature:
+// ---------------------------------------------------------------
     public static <E extends Comparable<E>> void bubbleSort(E[] list){
         boolean needNextPass = false;
 
@@ -85,10 +75,9 @@ public class Exercise23_01 {
             }
         }
     }
-
-
-    // ---------------------------------------------------------------
-    // TODO 4: Implement bubbleSort using Comparator
+// ---------------------------------------------------------------
+    
+// ---------------------------------------------------------------
     public static <E> void bubbleSort(E[] list, Comparator<? super E> comparator){
         boolean needNextPass = false;
 
@@ -105,8 +94,9 @@ public class Exercise23_01 {
             }
         }
     }
-
+// ---------------------------------------------------------------
     public static void main(String[] args) {
+        
 
         // --- Test 1: insertionSort with Comparable ---
         // Sort String array alphabetically (String implements Comparable)
