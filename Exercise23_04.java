@@ -61,20 +61,23 @@ public class Exercise23_04 {
     private static int partition(int[] list, int first, int last) {
 
         int middle = list[(first + last) / 2];
+        
+        if (last - first < 2) {
+            if ((first < middle && middle < last) || (last < middle && middle < first)) {
+                int temp = list[first];
+                list[first] = list[middle];
+                list[middle] = temp;
+            }
+            else if ((middle < first && first < last) || (last < first && first < middle)) {
+                int temp = list[first];
+                list[first] = temp;
+            }
+            else {
+                int temp = list[first];
+                list[first] = list[last];
+                list[last] = temp;
+            }
 
-        if ((first < middle && middle < last) || (last < middle && middle < first)) {
-            int temp = list[first];
-            list[first] = list[middle];
-            list[middle] = temp;
-        }
-        else if ((middle < first && first < last) || (last < first && first < middle)) {
-            int temp = list[first];
-            list[first] = temp;
-        }
-        else {
-            int temp = list[first];
-            list[first] = list[last];
-            list[last] = temp;
         }
 
         // TODO: Add median-of-three pivot selection here
